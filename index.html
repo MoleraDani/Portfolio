@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dani Molera</title>
+    <link rel="stylesheet" href="./resources/styles.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">Daniel Molera</a>
+        <nav>
+          <a href="#home">Inicio</a>
+          <a href="#about">Sobre mi</a>
+          <a href="#tecnologies">Tecnologias</a>
+          <a href="#portfolio">Proyectos</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <article
+          class="hero-image"
+          style="
+            --image: url('./imgs/Header-background.jpg');
+            --attachment: fixed;
+          "
+        >
+          <aside
+            class="hero-image-opacity"
+            style="--opacity-color: var(--fourth-color)"
+          >
+            <div class="hero-image-content">
+              <div>
+                <h2 class="hero-image-title" style="--color: white">
+                  Hola, soy Dani
+                </h2>
+                <br />
+                <p class="hero-image-text" style="--color: white">
+                  Estoy buscando mi primera oportunidad como
+                  <i>FrontEnd Developer</i>
+                </p>
+              </div>
+
+              <a href="#contact" class="btn">Contacto</a>
+            </div>
+          </aside>
+        </article>
+      </section>
+      <section class="about" id="about">
+        <div class="grid-container-about">
+          <article>
+            <p>
+              Hola, soy Dani Molera, tengo 28 años y vengo de un sector muy
+              diferente, como es el de la jardineria. <br />
+              Decidí dar el paso a ser desarrollador web debido a que, desde
+              siempre me ha gustado la informatica en general y finalmente tomé
+              la decisión de dedicarme a ello. <br />
+              Actualment estoy estudiando Daw (Grado superior de Desarrollo de
+              Aplicaciones Web) y cursando el <i>Career Path</i> de
+              <i>Front-End Engineer</i> en
+              <a href="https://www.codecademy.com/">Codecademy</a>. <br />
+              Tengo muchas ganas de empezar a trabajar para asi poder
+              desarrolandome en el mundo professional, no dudes en contactar.
+            </p>
+          </article>
+          <img src="" alt="Imagen de Dani" />
+        </div>
+      </section>
+      <section class="tecnologies" id="tecnologies">
+        <div class="tecnologies-content">
+          <h3 class="h3">Tecnologias</h3>
+          <article class="container svg">
+            <svg
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>html5</title>
+              <path
+                d="M11.677 13.196l-0.289-3.387 12.536 0.004 0.287-3.268-16.421-0.004 0.87 9.983h11.374l-0.406 4.27-3.627 1.002-3.683-1.009-0.234-2.63h-3.252l0.411 5.198 6.757 1.807 6.704-1.798 0.927-10.166h-11.954zM2.914 1.045h26.172l-2.38 26.874-10.734 3.037-10.673-3.038z"
+              ></path>
+            </svg>
+            <svg
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>css3</title>
+              <path
+                d="M24.235 6.519l-16.47-0.004 0.266 3.277 12.653 0.002-0.319 3.394h-8.298l0.3 3.215h7.725l-0.457 4.403-3.636 1.005-3.694-1.012-0.235-2.637h-3.262l0.362 4.817 6.829 2.128 6.714-1.912 1.521-16.675zM2.879 1.004h26.242l-2.387 26.946-10.763 3.045-10.703-3.047z"
+              ></path>
+            </svg>
+            <svg
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>javascript</title>
+              <path
+                d="M17.313 14.789h-2.809c0 2.422-0.011 4.829-0.011 7.254 0.033 0.329 0.051 0.712 0.051 1.099 0 0.81-0.081 1.601-0.236 2.365l0.013-0.076c-0.412 0.861-1.475 0.751-1.957 0.6-0.451-0.242-0.808-0.609-1.031-1.055l-0.006-0.014c-0.044-0.094-0.097-0.174-0.16-0.246l0.001 0.001-2.281 1.406c0.367 0.79 0.934 1.434 1.637 1.885l0.018 0.011c0.763 0.427 1.675 0.678 2.645 0.678 0.484 0 0.954-0.063 1.401-0.18l-0.038 0.009c0.988-0.248 1.793-0.89 2.254-1.744l0.009-0.019c0.359-0.914 0.566-1.973 0.566-3.080 0-0.388-0.026-0.77-0.075-1.145l0.005 0.044c0.015-2.567 0-5.135 0-7.722zM28.539 23.843c-0.219-1.368-1.11-2.518-3.753-3.59-0.92-0.431-1.942-0.731-2.246-1.425-0.063-0.158-0.099-0.341-0.099-0.532 0-0.124 0.015-0.244 0.044-0.359l-0.002 0.010c0.208-0.55 0.731-0.935 1.343-0.935 0.199 0 0.388 0.040 0.559 0.113l-0.009-0.004c0.552 0.19 0.988 0.594 1.215 1.112l0.005 0.013c1.292-0.845 1.292-0.845 2.193-1.406-0.216-0.369-0.459-0.689-0.734-0.977l0.002 0.002c-0.767-0.814-1.852-1.32-3.056-1.32-0.171 0-0.34 0.010-0.505 0.030l0.020-0.002-0.881 0.111c-0.856 0.194-1.587 0.639-2.133 1.252l-0.003 0.004c-0.535 0.665-0.859 1.519-0.859 2.449 0 1.279 0.613 2.415 1.56 3.131l0.010 0.007c1.706 1.275 4.2 1.555 4.519 2.755 0.3 1.462-1.087 1.931-2.457 1.762-0.957-0.218-1.741-0.83-2.184-1.652l-0.009-0.017-2.287 1.313c0.269 0.536 0.607 0.994 1.011 1.385l0.001 0.001c2.174 2.194 7.61 2.082 8.586-1.255 0.113-0.364 0.178-0.782 0.178-1.215 0-0.3-0.031-0.593-0.091-0.875l0.005 0.028zM1.004 1.004h29.991v29.991h-29.991z"
+              ></path>
+            </svg>
+          </article>
+        </div>
+      </section>
+      <section class="portfolio" id="portfolio">
+        <h3 class="h3">Proyectos</h3>
+        <a href="" class="portfolio-card">
+          <img src="./resources/imgs/portfolio-image.jpg" alt="Proyecto 1" />
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>Proyecto 1</h3>
+              <p>Explicacion</p>
+            </div>
+          </aside>
+        </a>
+        <a href="" class="portfolio-card">
+          <img src="./resources/imgs/portfolio-image.jpg" alt="Proyecto 2" />
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>Proyecto 2</h3>
+              <p>Explicacion</p>
+            </div>
+          </aside>
+        </a>
+        <a href="" class="portfolio-card">
+          <img src="./resources/imgs/portfolio-image.jpg" alt="Proyecto 3" />
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>Proyecto 3</h3>
+              <p>Explicacion</p>
+            </div>
+          </aside>
+        </a>
+      </section>
+      <section class="contact" id="contact">
+        <h3 class="h3">Contacto</h3>
+        <article class="contact-cards">
+          <aside class="card">
+            <svg
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>linkedin</title>
+              <a href="https://www.linkedin.com/in/dani-molera-0585a2212/">
+                <path
+                  d="M28.778 1.004h-25.56c-0.008-0-0.017-0-0.027-0-1.199 0-2.172 0.964-2.186 2.159v25.672c0.014 1.196 0.987 2.161 2.186 2.161 0.010 0 0.019-0 0.029-0h25.555c0.008 0 0.018 0 0.028 0 1.2 0 2.175-0.963 2.194-2.159l0-0.002v-25.67c-0.019-1.197-0.994-2.161-2.195-2.161-0.010 0-0.019 0-0.029 0h0.001zM9.9 26.562h-4.454v-14.311h4.454zM7.674 10.293c-1.425 0-2.579-1.155-2.579-2.579s1.155-2.579 2.579-2.579c1.424 0 2.579 1.154 2.579 2.578v0c0 0.001 0 0.002 0 0.004 0 1.423-1.154 2.577-2.577 2.577-0.001 0-0.002 0-0.003 0h0zM26.556 26.562h-4.441v-6.959c0-1.66-0.034-3.795-2.314-3.795-2.316 0-2.669 1.806-2.669 3.673v7.082h-4.441v-14.311h4.266v1.951h0.058c0.828-1.395 2.326-2.315 4.039-2.315 0.061 0 0.121 0.001 0.181 0.003l-0.009-0c4.5 0 5.332 2.962 5.332 6.817v7.855z"
+                  fill="rgba(212, 240, 113, 1)"
+                ></path>
+              </a>
+            </svg>
+          </aside>
+          <aside class="card">
+            <a href="moleradani@gmail.com"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 7L10.94 11.3375C11.5885 11.7428 12.4115 11.7428 13.06 11.3375L20 7M5 18H19C20.1046 18 21 17.1046 21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z"
+                  stroke="rgba(212, 240, 113, 1)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+          </aside>
+          <aside class="card">
+            <a href="https://github.com/MoleraDani"
+              ><svg
+                viewBox="0 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>github</title>
+                <path
+                  d="M16 1.375c-8.282 0-14.996 6.714-14.996 14.996 0 6.585 4.245 12.18 10.148 14.195l0.106 0.031c0.75 0.141 1.025-0.322 1.025-0.721 0-0.356-0.012-1.3-0.019-2.549-4.171 0.905-5.051-2.012-5.051-2.012-0.288-0.925-0.878-1.685-1.653-2.184l-0.016-0.009c-1.358-0.93 0.105-0.911 0.105-0.911 0.987 0.139 1.814 0.718 2.289 1.53l0.008 0.015c0.554 0.995 1.6 1.657 2.801 1.657 0.576 0 1.116-0.152 1.582-0.419l-0.016 0.008c0.072-0.791 0.421-1.489 0.949-2.005l0.001-0.001c-3.33-0.375-6.831-1.665-6.831-7.41-0-0.027-0.001-0.058-0.001-0.089 0-1.521 0.587-2.905 1.547-3.938l-0.003 0.004c-0.203-0.542-0.321-1.168-0.321-1.821 0-0.777 0.166-1.516 0.465-2.182l-0.014 0.034s1.256-0.402 4.124 1.537c1.124-0.321 2.415-0.506 3.749-0.506s2.625 0.185 3.849 0.53l-0.1-0.024c2.849-1.939 4.105-1.537 4.105-1.537 0.285 0.642 0.451 1.39 0.451 2.177 0 0.642-0.11 1.258-0.313 1.83l0.012-0.038c0.953 1.032 1.538 2.416 1.538 3.937 0 0.031-0 0.061-0.001 0.091l0-0.005c0 5.761-3.505 7.029-6.842 7.398 0.632 0.647 1.022 1.532 1.022 2.509 0 0.093-0.004 0.186-0.011 0.278l0.001-0.012c0 2.007-0.019 3.619-0.019 4.106 0 0.394 0.262 0.862 1.031 0.712 6.028-2.029 10.292-7.629 10.292-14.226 0-8.272-6.706-14.977-14.977-14.977-0.006 0-0.013 0-0.019 0h0.001z"
+                  fill="rgba(212, 240, 113, 1)"
+                ></path></svg
+            ></a>
+          </aside>
+        </article>
+
+        <form action="" method="POST" class="form">
+          <input
+            type="text"
+            name="name"
+            placeholder="Introduzca su nombre"
+            title="Introduzca unicamente letras o espacios en blanco"
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            required
+          />
+          <input
+            type="text"
+            name="email"
+            id=""
+            placeholder="Introduzca su correo"
+            title="Introduzca un email válido"
+            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+            required
+          />
+          <textarea
+            name="comment"
+            cols="50"
+            rows="10"
+            placeholder="Introduzca un comentario"
+            required
+          ></textarea>
+          <input type="submit" class="btn" />
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

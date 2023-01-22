@@ -1,0 +1,286 @@
+/* CUSTOM PROPERTIES */
+
+:root {
+  --first-color: rgba(136, 143, 110, 1);
+  --second-color: rgba(212, 240, 113, 1);
+  --third-color: rgba(225, 237, 183, 1);
+  --fourth-color: rgba(31, 32, 26, 0.4);
+  --opp-color: rgba(115, 136, 38, 0.5);
+  --alt-color: rgba(177, 186, 143, 0.85);
+  --text-color: #00141a;
+  --max-width: 1400px;
+}
+
+/*RESET*/
+
+html {
+  box-sizing: border-box;
+  /* font-family: var(); */
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+
+a {
+  /* color: var(); */
+  transition: all 0.5s ease-out;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+P {
+  line-height: 1.6;
+}
+
+/* UTILITIES */
+
+.btn {
+  border: 1px solid var(--second-color);
+  border-radius: 1rem;
+  text-decoration: none;
+  padding: 1rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: var(--second-color);
+}
+
+/* HERO IMAGE */
+
+.hero-image {
+  background-image: var(--image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: var(--attachment);
+}
+
+.hero-image-opacity {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--opacity-color);
+}
+
+.hero-image-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-image-title,
+.hero-image-text {
+  font-size: 3vw;
+  color: var(--color);
+}
+
+.hero-image-text {
+  font-size: 1.25vw;
+}
+
+/* SITE STYLES */
+
+.card {
+  width: 7.5rem;
+  fill: var(--second-color);
+  stroke: var(--second-color);
+}
+
+.contact {
+  background-color: var(--alt-color);
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container {
+  /* margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form {
+  margin: 2rem auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  max-width: 800px;
+}
+
+.form > * {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 1rem;
+}
+
+.form input:last-of-type {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.grid-container-about {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.h3 {
+  margin: 1rem auto 4rem;
+  text-align: center;
+  width: 10rem;
+  border-bottom: solid var(--first-color);
+  border-top: solid var(--first-color);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  height: 4rem;
+  width: 100%;
+  background-color: var(--first-color);
+  padding: 0.75rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-left: 2%;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+.portfolio {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-evenly;
+  min-height: 50vh;
+}
+
+.portfolio h3 {
+  grid-column: span 3;
+}
+
+.portfolio-card {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  background-color: var(--opp-color);
+  width: 100%;
+  height: 100%;
+  color: var(--text-color);
+  transition: all 0.5 ease-in;
+}
+.portfolio-card:hover .portfolio-card-info {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tecnologies {
+  display: grid;
+  align-content: center;
+  height: 50vh;
+  background-color: var(--alt-color);
+}
+
+.tecnologies-content {
+  width: 100%;
+  align-content: center;
+  height: 30vh;
+}
+
+.svg {
+  justify-content: space-evenly;
+}
+
+.svg svg {
+  fill: var(--second-color);
+  width: 7.5rem;
+}
