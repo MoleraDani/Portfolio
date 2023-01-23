@@ -267,11 +267,13 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 45%);
   justify-content: space-evenly;
+  justify-items: center;
   align-items: center;
 }
 
 .grid-container-about-img {
   object-fit: cover;
+  max-height: 90vh;
 }
 
 .h3 {
@@ -464,9 +466,12 @@ footer {
   }
 
   .grid-container-about {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     grid-template-columns: 90%;
-    align-items: center;
+  }  
+
+  .grid-container-about-img{
+    max-height: 50vh;
   }
 
   .menu {
@@ -490,6 +495,18 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+  .card a {
+    width: 8rem;
+  }
+
+  .card svg {
+    width: 6rem;
+  }
+
+  .grid-container-about p{
+    line-height: 1.25;
+  }
+  
   .hero-image-title,
   .hero-image-text {
     padding: 0 5%;
@@ -499,13 +516,5 @@ footer {
   .hero-image-text {
     font-size: 4vw;
     padding: 5% 5%;
-  }
-
-  .card a {
-    width: 8rem;
-  }
-
-  .card svg {
-    width: 6rem;
   }
 }
