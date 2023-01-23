@@ -263,12 +263,12 @@ footer {
 }
 
 .grid-container-about {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 45%);
   justify-content: space-evenly;
   justify-items: center;
-  align-items: center;
+  align-items: center; 
 }
 
 .grid-container-about-img {
@@ -403,6 +403,10 @@ footer {
   min-height: 50vh;
 }
 
+.portfolio h3{
+  margin: 2rem auto;
+}
+
 .tecnologies {
   display: grid;
   align-content: center;
@@ -501,10 +505,6 @@ footer {
 
   .card svg {
     width: 6rem;
-  }
-
-  .grid-container-about p{
-    line-height: 1.25;
   }
   
   .hero-image-title,
