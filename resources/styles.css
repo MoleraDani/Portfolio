@@ -263,14 +263,14 @@ footer {
 }
 
 .grid-container-about {
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 45%);
   justify-content: space-evenly;
-  align-content: center;
+  align-items: center;
 }
 
-.grid-container-about {
+.grid-container-about-img {
   object-fit: cover;
 }
 
@@ -465,10 +465,8 @@ footer {
 
   .grid-container-about {
     min-height: 100vh;
-    display: grid;
     grid-template-columns: 90%;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
   }
 
   .menu {
