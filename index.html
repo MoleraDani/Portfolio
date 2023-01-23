@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dani Molera</title>
     <link rel="stylesheet" href="./resources/styles.css" />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -110,33 +110,35 @@
       </section>
       <section class="portfolio" id="portfolio">
         <h3 class="h3">Proyectos</h3>
-        <a href="" class="portfolio-card">
-          <img src="./resources/imgs/portfolio-image.jpg" alt="Proyecto 1" />
-          <aside class="portfolio-card-info">
-            <div>
-              <h3>Proyecto 1</h3>
-              <p>Explicacion</p>
-            </div>
-          </aside>
-        </a>
-        <a href="" class="portfolio-card">
-          <img src="./resources/imgs/portfolio-image.jpg" alt="Proyecto 2" />
-          <aside class="portfolio-card-info">
-            <div>
-              <h3>Proyecto 2</h3>
-              <p>Explicacion</p>
-            </div>
-          </aside>
-        </a>
-        <a href="" class="portfolio-card">
-          <img src="./resources/imgs/portfolio-image.jpg" alt="Proyecto 3" />
-          <aside class="portfolio-card-info">
-            <div>
-              <h3>Proyecto 3</h3>
-              <p>Explicacion</p>
-            </div>
-          </aside>
-        </a>
+        <article class="portfolio-grid-container">
+          <a href="" class="portfolio-card">
+            <img src="./resources/imgs/portfolio-image.jpg" alt="Proyecto 1" />
+            <aside class="portfolio-card-info">
+              <div>
+                <h3>Proyecto 1</h3>
+                <p>Explicacion</p>
+              </div>
+            </aside>
+          </a>
+          <a href="" class="portfolio-card">
+            <img src="./resources/imgs/portfolio-image.jpg" alt="Proyecto 2" />
+            <aside class="portfolio-card-info">
+              <div>
+                <h3>Proyecto 2</h3>
+                <p>Explicacion</p>
+              </div>
+            </aside>
+          </a>
+          <a href="" class="portfolio-card">
+            <img src="./resources/imgs/portfolio-image.jpg" alt="Proyecto 3" />
+            <aside class="portfolio-card-info">
+              <div>
+                <h3>Proyecto 3</h3>
+                <p>Explicacion</p>
+              </div>
+            </aside>
+          </a>
+        </article>
       </section>
       <section class="contact" id="contact">
         <h3 class="h3">Contacto</h3>
@@ -156,21 +158,22 @@
               </a>
             </svg>
           </aside>
-          <aside class="card">
-            <a href="moleradani@gmail.com"
-              ><svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 7L10.94 11.3375C11.5885 11.7428 12.4115 11.7428 13.06 11.3375L20 7M5 18H19C20.1046 18 21 17.1046 21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z"
-                  stroke="rgba(212, 240, 113, 1)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                /></svg
-            ></a>
+          <aside class="card mail">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <a href="moleradani@gmail.com"></a>
+              <path
+                d="M4 7L10.94 11.3375C11.5885 11.7428 12.4115 11.7428 13.06 11.3375L20 7M5 18H19C20.1046 18 21 17.1046 21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z"
+                stroke="rgba(212, 240, 113, 1)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p><b>moleradani@gmail.com</b></p>
           </aside>
           <aside class="card">
             <a href="https://github.com/MoleraDani"
@@ -188,7 +191,7 @@
           </aside>
         </article>
 
-        <form action="" method="POST" class="form">
+        <form class="form">
           <input
             type="text"
             name="name"
@@ -215,8 +218,18 @@
           ></textarea>
           <input type="submit" class="btn" />
         </form>
+        <article id="gracias" class="modal">
+          <div class="modal-content">
+            <article class="contact-form-response">
+              <h3>Gracias por contactar.</h3>
+            </article>
+          </div>
+        </article>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <small> <b>Creado por Dani Molera </b> </small>
+      <small> <b>Mail de contacto: moleradani@gmail.com</b> </small>
+    </footer>
   </body>
 </html>

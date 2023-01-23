@@ -84,7 +84,9 @@ P {
 
 .btn {
   border: 1px solid var(--second-color);
+  background-color: var(--second-color);
   border-radius: 1rem;
+  cursor: pointer;
   text-decoration: none;
   padding: 1rem;
   display: inline-block;
@@ -92,7 +94,10 @@ P {
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
-  background-color: var(--second-color);
+}
+
+.btn:hover {
+  opacity: 0.75;
 }
 
 /* HERO IMAGE */
@@ -124,31 +129,50 @@ P {
 
 .hero-image-title,
 .hero-image-text {
-  font-size: 3vw;
+  font-size: 3.75vw;
   color: var(--color);
 }
 
 .hero-image-text {
-  font-size: 1.25vw;
+  font-size: 1.75vw;
 }
 
 /* SITE STYLES */
 
 .card {
-  width: 7.5rem;
   fill: var(--second-color);
   stroke: var(--second-color);
+}
+
+.card a {
+  width: 10rem;
+}
+
+.card svg {
+  width: 7.5rem;
+}
+
+.card p {
+  margin: 0;
 }
 
 .contact {
   background-color: var(--alt-color);
   margin-top: 1rem;
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 
 .contact-cards {
   display: flex;
   justify-content: space-evenly;
+}
+
+.contact-form-response {
+  padding: 1rem;
+  width: 400px;
+  text-align: center;
+  background-color: var(--third-color);
+  border-radius: 1rem;
 }
 
 .container {
@@ -158,6 +182,13 @@ P {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+footer {
+  background-color: var(--first-color);
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form {
@@ -182,7 +213,7 @@ P {
 }
 
 .grid-container-about {
-  height: 50vh;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: repeat(2, 45%);
   justify-content: space-evenly;
@@ -204,6 +235,7 @@ P {
   width: 100%;
   background-color: var(--first-color);
   padding: 0.75rem;
+  z-index: 99;
 }
 
 .logo {
@@ -214,6 +246,37 @@ P {
   font-weight: bold;
 }
 
+.mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--alt-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal#gracias:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 nav a {
   text-decoration: none;
   color: var(--text-color);
@@ -222,15 +285,9 @@ nav a {
 }
 
 .portfolio {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  justify-content: space-evenly;
-  min-height: 50vh;
 }
 
 .portfolio h3 {
-  grid-column: span 3;
 }
 
 .portfolio-card {
@@ -263,6 +320,14 @@ nav a {
   pointer-events: auto;
 }
 
+.portfolio-grid-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-evenly;
+  min-height: 50vh;
+}
+
 .tecnologies {
   display: grid;
   align-content: center;
@@ -283,4 +348,63 @@ nav a {
 .svg svg {
   fill: var(--second-color);
   width: 7.5rem;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1024px) {
+  .hero-image-content {
+    flex-direction: column;
+  }
+
+  .hero-image-title,
+  .hero-image-text {
+    font-size: 6vw;
+  }
+  .hero-image-text {
+    font-size: 3vw;
+  }
+
+  .portfolio-grid-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 90%;
+    gap: 1rem;
+    min-height: 50vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container-about {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .form {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-image-title,
+  .hero-image-text {
+    padding: 0 5%;
+    font-size: 8vw;
+  }
+
+  .hero-image-text {
+    font-size: 4vw;
+    padding: 5% 5%;
+  }
+
+  .card a {
+    width: 8rem;
+  }
+
+  .card svg {
+    width: 6rem;
+  }
 }
