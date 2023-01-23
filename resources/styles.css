@@ -9,6 +9,7 @@
   --alt-color: rgba(177, 186, 143, 0.85);
   --text-color: #00141a;
   --max-width: 1400px;
+  --header-height: 3.5rem;
 }
 
 /*RESET*/
@@ -100,14 +101,21 @@ P {
   opacity: 0.75;
 }
 
+.btn:active {
+  /* TO CHANGE */
+}
+
 .btn-menu {
   display: flex;
   flex-direction: column;
   width: 3rem;
-  height: 3rem;
+  height: 100%;
   border: 0;
   background: transparent;
   gap: 0.65rem;
+  opacity: 0;
+  pointer-events: none;
+  justify-content: center;
 }
 
 .btn-menu > div {
@@ -117,15 +125,16 @@ P {
   border-radius: 5px;
   transition: all 0.5s;
   transform-origin: left;
+  jus
 }
 
-.btn-menu:hover div:first-child {
+.btn-menu:active div:first-child {
   transform: rotate(45deg);
 }
-.btn-menu:hover div:nth-child(2) {
+.btn-menu:active div:nth-child(2) {
   opacity: 0;
 }
-.btn-menu:hover div:last-child {
+.btn-menu:active div:last-child {
   transform: rotate(-45deg);
 }
 
@@ -167,6 +176,18 @@ P {
 }
 
 /* SITE STYLES */
+
+.activeFL {
+  transform: rotate(45deg);
+}
+
+.activeML {
+  opacity: 0;
+}
+
+.activeTL {
+  transform: rotate(-45deg);
+}
 
 .card {
   fill: var(--second-color);
@@ -242,11 +263,15 @@ footer {
 }
 
 .grid-container-about {
-  min-height: 50vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 45%);
   justify-content: space-evenly;
   align-content: center;
+}
+
+.grid-container-about {
+  object-fit: cover;
 }
 
 .h3 {
@@ -259,8 +284,10 @@ footer {
 
 .header {
   position: sticky;
+  display: inline-flex;
+  justify-content: space-around;
   top: 0;
-  height: 3.5rem;
+  height: 4rem;
   width: 100%;
   background-color: var(--first-color);
   padding: 0.75rem;
@@ -273,6 +300,11 @@ footer {
   font-size: 2rem;
   margin-left: 2%;
   font-weight: bold;
+  white-space: nowrap;
+}
+
+.logo:hover {
+  color: var(--second-color);
 }
 
 .mail {
@@ -281,9 +313,34 @@ footer {
   align-items: center;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: var(--first-color);
+  transition: opacity 0.5s ease;
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.5rem;
+}
+
+.menu a:hover {
+  color: var(--second-color);
+}
+
 .modal {
   position: fixed;
-  z-index: 999;
+  z-index: 99;
   top: 0;
   right: 0;
   bottom: 0;
@@ -304,19 +361,6 @@ footer {
 .modal#gracias:target {
   opacity: 1;
   pointer-events: auto;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-size: 1.5rem;
-  padding: 1.5rem;
-}
-
-.portfolio {
-}
-
-.portfolio h3 {
 }
 
 .portfolio-card {
@@ -394,6 +438,12 @@ nav a {
     font-size: 3vw;
   }
 
+  .menu a {
+    padding: 0.75rem;
+    font-size: 1.35rem;
+    white-space: nowrap;
+  }
+
   .portfolio-grid-container {
     margin-top: 2rem;
     display: grid;
@@ -404,6 +454,15 @@ nav a {
 }
 
 @media screen and (max-width: 768px) {
+  .btn-menu {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .form {
+    padding: 0 2rem;
+  }
+
   .grid-container-about {
     min-height: 100vh;
     display: grid;
@@ -412,8 +471,23 @@ nav a {
     align-content: center;
   }
 
-  .form {
-    padding: 0 2rem;
+  .menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: calc(var(--header-height) + 0.5rem);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: var(--first-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    border-radius: 1rem;
+  }
+  .menu a:hover {
+    background-color: var(--second-color);
   }
 }
 
