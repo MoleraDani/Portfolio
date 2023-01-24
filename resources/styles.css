@@ -125,7 +125,6 @@ P {
   border-radius: 5px;
   transition: all 0.5s;
   transform-origin: left;
-  jus
 }
 
 .btn-menu:active div:first-child {
@@ -268,7 +267,7 @@ footer {
   grid-template-columns: repeat(2, 45%);
   justify-content: space-evenly;
   justify-items: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .grid-container-about-img {
@@ -403,7 +402,7 @@ footer {
   min-height: 50vh;
 }
 
-.portfolio h3{
+.portfolio h3 {
   margin: 2rem auto;
 }
 
@@ -472,9 +471,9 @@ footer {
   .grid-container-about {
     /* min-height: 100vh; */
     grid-template-columns: 90%;
-  }  
+  }
 
-  .grid-container-about-img{
+  .grid-container-about-img {
     max-height: 50vh;
   }
 
@@ -499,6 +498,10 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+  .card {
+    margin: 0.5rem;
+  }
+
   .card a {
     width: 8rem;
   }
@@ -506,7 +509,16 @@ footer {
   .card svg {
     width: 6rem;
   }
-  
+
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
   .hero-image-title,
   .hero-image-text {
     padding: 0 5%;
@@ -516,5 +528,20 @@ footer {
   .hero-image-text {
     font-size: 4vw;
     padding: 5% 5%;
+  }
+
+  .tecnologies {
+    display: flex;
+    height: 100vh;
+  }
+
+  .tecnologies-content {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .svg svg {
+    margin-bottom: 2rem;
   }
 }
